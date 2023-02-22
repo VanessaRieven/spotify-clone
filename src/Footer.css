@@ -5,4 +5,82 @@
        position: fixed;
        bottom: 0;
        padding: 20px;
+       display: flex;
+       justify-content: space-between;
+       color: #fff;
+}
+
+.footerLeft {
+       flex: 0.3;
+       display: flex;
+       align-items: center;
+       max-width: 300px;
+}
+
+.footerLeft .footerAlbumLogo {
+       height: 60px;
+       width: 60px;
+       margin-right: 20px;
+       object-fit: contain;
+}
+
+.footerCenter {
+       flex: 0.4;
+       padding: 0 100px;
+       color: #fff;
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       max-width: 200px;
+}
+
+
+.footerCenter .footerIcon {
+       transition: 200ms color ease-in;
+       color: #efefef;
+       font-size: 30px;
+}
+
+.footerCenter .footerPlayIcon {
+       color: #fff;
+       font-size: 40px;
+}
+
+.footerCenter .footerIconSmallSize {
+       font-size: 20px;
+}
+
+
+.footerCenter .footerIcon:hover {
+       color: #1ed15e;
+       cursor: pointer;
+       transition: transform 0.2s ease-in-out;
+       transform: scale(1.1) !important;
+}
+
+.footerRight {
+       flex: 0.3;
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       max-width: 200px;
+       padding-right: 50px;
+}
+
+.footerGridFlex {
+       display: flex;
+       align-items: center;
+}
+
+.footerRight * .MuiSlider-root {
+       color: #fff;
+}
+
+.footerSongInfo > h4 {
+       font-size: 14px;
+}
+
+.footerSongInfo > p {
+       font-size: 10px;
+       margin-top: 5px;
 }

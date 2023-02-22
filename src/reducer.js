@@ -5,7 +5,7 @@ export const initialState = {
        playlists: [],
        playing: false,
        item: null,
-       token: "BQDaIV3K_FDuwwORDxmJI9s0ftWI5gFbObyni1plamTiSiw0-VrSYRIh6OW5W9E4BQwEeOBMUokylfvaUe9c0crHihWqbUkCUfbOob0_I4TvDVFqWAhv5h3kA3bfgOtSeLbQoeAfQr69M4yanUk2EE--sAB0937pnLHPumPVXJz2b_L6j1UAeOZVMHexZMcXRHBoIl2umtocwkhEfw"
+       // token: "BQDaIV3K_FDuwwORDxmJI9s0ftWI5gFbObyni1plamTiSiw0-VrSYRIh6OW5W9E4BQwEeOBMUokylfvaUe9c0crHihWqbUkCUfbOob0_I4TvDVFqWAhv5h3kA3bfgOtSeLbQoeAfQr69M4yanUk2EE--sAB0937pnLHPumPVXJz2b_L6j1UAeOZVMHexZMcXRHBoIl2umtocwkhEfw"
 };
 //state is what we currenly have, the action sets the state to what we want, like playing to true or playing to false
 const reducer = (state, action) =>  {
@@ -35,6 +35,11 @@ const reducer = (state, action) =>  {
                      return {
                            ...state,
                             item: action.item
+                     }
+               case 'SET_DISCOVER_WEEKLY':
+                     return {
+                           ...state,
+                            discover_weekly: action.discover_weekly
                      }
               default: 
                      return state

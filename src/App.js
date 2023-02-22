@@ -33,7 +33,7 @@ function App() {
           user: user
         });
       }) 
-      
+
       //get user playlists from spotify
       spotify.getUserPlaylists().then((playlists) => {
         dispatch({
@@ -41,6 +41,15 @@ function App() {
           playlists: playlists
         });
       })
+
+      //get  user weekly feed
+      spotify.getPlaylist('37i9dQZEVXcKN0N9wmKL39').then((response) => {
+        dispatch({
+          type: 'SET_DISCOVER_WEEKLY',
+          discover_weekly: response
+        });
+      })
+
     }
   }, []);
 
