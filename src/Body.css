@@ -4,6 +4,7 @@
        height: 100vh;
        color: #fff;
        padding: 30px;
+       overflow: scroll;
 }
 
 .body::-webkit-scrollbar {
